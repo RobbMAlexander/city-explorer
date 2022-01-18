@@ -6,9 +6,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      displayCityData: false,
-      cityData: [],
-      userSearch: '',
       errMsg: '',
       errRender: false,
     }
