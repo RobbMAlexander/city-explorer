@@ -1,4 +1,46 @@
-# Getting Started with Create React App
+# City Explorer
+
+**Author**: Robb Alexander
+**Version**: 1.0.0
+
+## Overview
+
+This app allows for simple access to regional maps and location data through a user request form (via API connection).
+
+## Getting Started
+
+## Architecture
+
+This is a Javascript app running React and using [Axios](https://www.npmjs.com/package/axios)-based connection requests to receive API data from [LocationIQ](https://locationiq.com/)'s database.
+
+Lab 06 Data Flow:
+![Data Flow](Lab-06-Data-Flow.png)
+
+Lab 07 Data Flow:
+![Data Flow](lab-07-dataflow.png)
+
+## Change Log
+
+01/17/2022 - 0.0.1 
+
+01/18/22 5:40PM - Basic server functionality (req/res)
+
+01/18/22 
+
+## Credit and Collaborations
+
+[Axios](https://www.npmjs.com/package/axios)
+[LocationIQ](https://locationiq.com/)
+
+## Feature timeframes
+
+### Feature
+
+* Estimated completion time:
+
+* Actual:   (:PM - :PM)
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +109,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
