@@ -19,13 +19,16 @@ Lab 06 Data Flow:
 Lab 07 Data Flow:
 ![Data Flow](lab-07-dataflow.png)
 
+Lab 08 Data Flow:
+![Data Flow](lab-08-dataflow.png)
+
 ## Change Log
 
 01/17/2022 - 0.0.1 
 
 01/18/22 5:40PM - Basic server functionality (req/res)
 
-01/18/22 
+01/19/22 :PM - 
 
 ## Credit and Collaborations
 
