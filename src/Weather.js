@@ -18,13 +18,13 @@ class Weather extends CityDisplay {
   }
 
 
-  handleWeatherSubmit = e => {
+  handleWeatherSubmit = (e) => {
     e.preventDefault();
 
     // todo: add query entry to weatherUrl
 
     
-    let weatherUrl = 'http://localhost/3003/weather&q=';
+    let weatherUrl = `http://localhost/3001/weather?lat=${lat}&lon=${lon}`;
 
     try {
       let cityWeather = await axios.get(weatherUrl)
