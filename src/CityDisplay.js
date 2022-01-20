@@ -45,8 +45,8 @@ class CityDisplay extends React.Component {
     console.log(this.userSearch);
   }
 
-  getCityData = async () => {
-
+  getCityData = async (e) => {
+    e.preventDefault();
     try {
       let url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_ACCESS_TOKEN}&q=${this.state.userSearch}&format=json`
 
@@ -58,7 +58,7 @@ class CityDisplay extends React.Component {
     } catch (error) {
       this.setState({
         errRender: true,
-        errMsg: `An error has occurred: ${error.response.data}`
+        errMsg: `An error has occurred: ${error.response.status}, ${error.response.data}!`
 
       })
     }

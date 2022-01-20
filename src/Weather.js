@@ -23,11 +23,14 @@ class Weather extends CityDisplay {
 
     // todo: add query entry to weatherUrl
 
+    //todo: move `get`s to app.js?
     
     let weatherUrl = `http://localhost/3001/weather?lat=${lat}&lon=${lon}`;
 
     try {
       let cityWeather = await axios.get(weatherUrl)
+
+      // use data id'd by server code
 
       this.setState({
         cityWeather: cityWeather,
@@ -40,8 +43,14 @@ class Weather extends CityDisplay {
       })
     }
   }
+
+  getWeatherdata = async () => {
+
+  }
+
   render() {
 
+    weatherRenderedWIP
 
 
     return (
