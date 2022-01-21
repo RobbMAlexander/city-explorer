@@ -1,69 +1,32 @@
 import './App.css';
 import React from 'react';
-import axios from 'axios';
-import CityDisplay from './CityDisplay';
+import WeatherLI from './WeatherLI';
+import ListGroup from 'react-bootstrap/ListGroup';
 
-class Weather extends CityDisplay {
-  constructor(props) {
-    super(props);
-    this.state = {
-      weatherQuery: '',
-      weatherRendered: false,
-      errMsg: '',
-      errRender: false,
-      city: '',
-      displayWeatherData: '',
-      cityWeather,
-    }
-  }
+class Weather extends React.Component {
 
-
-  handleWeatherSubmit = (e) => {
-    e.preventDefault();
-
-    // todo: add query entry to weatherUrl
-
-    //todo: move `get`s to app.js?
-    
-    let weatherUrl = `http://localhost/3001/weather?lat=${lat}&lon=${lon}`;
-
-    try {
-      let cityWeather = await axios.get(weatherUrl)
-
-      // use data id'd by server code
-
-      this.setState({
-        cityWeather: cityWeather,
-      });
-      this.weatherRendered = true;
-    } catch (error) {
-      this.setState({
-        errRender: true,
-        errMsg: `An error has occurred: ${error.response.data}`
-      })
-    }
-  }
-
-  getWeatherdata = async () => {
-
-  }
 
   render() {
-
-    weatherRenderedWIP
-
+    let cityForecast = this.props.data.map((data, index) => {
+      let forecastElements = (
+        <WeatherLI
+          key={index}
+          date={data.date}
+          description={data.description}
+          dayHigh={data.dayHigh}
+          dayLow={data.dayLow}
+        />
+      )
+      return forecastElements;
+    }
+    )
 
     return (
-      <>
-        <h3>Weather for {`${city}`}</h3>
-        <h3>{`${cityWeather}`}</h3>
-
-        {this.state.displayWeatherData ? weatherRendered : ''}
-      </>
-    );
-
-
-  };
+      <ListGroup>
+        {cityForecast}
+      </ListGroup>
+    )
+  }
 }
 
 export default Weather;

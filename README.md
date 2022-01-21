@@ -13,14 +13,17 @@ This app allows for simple access to regional maps and location data through a u
 
 This is a Javascript app running React and using [Axios](https://www.npmjs.com/package/axios)-based connection requests to receive API data from [LocationIQ](https://locationiq.com/)'s database.
 
-Lab 06 Data Flow:
-![Data Flow](Lab-06-Data-Flow.png)
+Lab 06 Data Flow (Authored with Rey Mercado):
+![Data Flow](lab-06-dataflow.png)
 
-Lab 07 Data Flow:
+Lab 07 Data Flow (Authored with Brian Thornburg):
 ![Data Flow](lab-07-dataflow.png)
 
-Lab 08 Data Flow:
+Lab 08 Data Flow (Authored with Kevin LaMarca):
 ![Data Flow](lab-08-dataflow.png)
+
+Lab 09 Data Flow (Authored with Hambalieu Jallow):
+![Data Flow](lab-09-dataflow.png)
 
 ## Change Log
 
