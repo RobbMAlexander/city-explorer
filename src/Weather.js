@@ -8,7 +8,7 @@ class Weather extends React.Component {
 
   render() {
     let cityForecast = this.props.data.map((data, index) => {
-      let forecastElements = (
+      return (
         <WeatherLI
           key={index}
           date={data.date}
@@ -17,9 +17,7 @@ class Weather extends React.Component {
           dayLow={data.dayLow}
         />
       )
-      return forecastElements;
-    }
-    )
+    })
 
     return (
       <ListGroup>

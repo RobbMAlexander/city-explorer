@@ -16,6 +16,7 @@ class Movies extends React.Component {
         />
       )
     })
+    
     return (
       <Carousel fade>
         {movieCardDisplay}
