@@ -127,11 +127,13 @@ class App extends React.Component {
             </Card.Text>
           </Card>
           }
+          {
+            this.state.displayWeather && <Weather data={this.state.weatherData} />
+          }
+          {
+            this.state.displayMovies && <Movies data={this.state.moviesData} />
+          }
           {this.state.renderError && <p>{this.state.errMsg}</p>}
-          <>
-            <Weather />
-            <Movies />
-          </>
         </main>
       </>
     );
