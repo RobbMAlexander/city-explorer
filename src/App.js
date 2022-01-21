@@ -25,12 +25,10 @@ class App extends React.Component {
     };
   };
 
-
-
-  // handleExplore = (e) => this.setState({ searchQuery: e.target.value });
-
   handleExplore = async (e) => {
     e.preventDefault();
+
+    this.setState({ searchQuery: e.target.value });
 
     let apiURL = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_ACCESS_TOKEN}&q=${this.state.searchQuery}&format=json`;
 
