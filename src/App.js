@@ -71,8 +71,9 @@ class App extends React.Component {
 
 
     } catch (error) {
+      console.log(error);
       this.setState({
-        errMsg: `An error has occurred: ${error.response.data}`,
+        errMsg: `An error has occurred: ${error}`,
         errRender: true,
       })
     }
