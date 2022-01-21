@@ -27,9 +27,9 @@ class App extends React.Component {
 
 
 
-  handleExplore = (e) => this.setState({ searchQuery: e.target.value });
+  // handleExplore = (e) => this.setState({ searchQuery: e.target.value });
 
-  handleButton = async (e) => {
+  handleExplore = async (e) => {
     e.preventDefault();
 
     let apiURL = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_ACCESS_TOKEN}&q=${this.state.searchQuery}&format=json`;
@@ -72,33 +72,33 @@ class App extends React.Component {
     }
   }
 
-  handleCitySubmit = (e) => {
-    e.preventDefault();
+  // handleCitySubmit = (e) => {
+  //   e.preventDefault();
 
-    this.getCityData(this.state.searchQuery);
+  //   this.getCityData(this.state.searchQuery);
 
-    console.log(this.searchQuery);
-  }
+  //   console.log(this.searchQuery);
+  // }
 
-  getCityData = async (e) => {
-    e.preventDefault();
-    let url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_ACCESS_TOKEN}&q=${this.state.searchQuery}&format=json`;
+  // getCityData = async (e) => {
+  //   e.preventDefault();
+  //   let url = `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_ACCESS_TOKEN}&q=${this.state.searchQuery}&format=json`;
 
-    try {
+  //   try {
 
-      let cityResults = await axios.get(url);
+  //     let cityResults = await axios.get(url);
 
-      this.setState({
-        cityData: cityResults.data[0]
-      })
-    } catch (error) {
-      this.setState({
-        errRender: true,
-        errMsg: `An error has occurred: ${error.response.status}, ${error.response.data}!`,
+  //     this.setState({
+  //       cityData: cityResults.data[0]
+  //     })
+  //   } catch (error) {
+  //     this.setState({
+  //       errRender: true,
+  //       errMsg: `An error has occurred: ${error.response.status}, ${error.response.data}!`,
 
-      })
-    }
-  }
+  //     })
+  //   }
+  // }
 
 
   render(
@@ -111,7 +111,6 @@ class App extends React.Component {
           <h1>Learn About A City</h1>
         </header>
         <main>
-          <button onClick={this.handleButton}>Display City Information</button>
           <form onSubmit={this.handleExplore}>
             <label>Input A City
               <input name="city" type="text" onInput={this.handleCityInput} />
