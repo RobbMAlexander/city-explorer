@@ -52,7 +52,7 @@ class App extends React.Component {
       })
 
 
-      let serverWeatherURL = `https://city-explorer-rma.herokuapp.com/weather?lat=${this.state.cityData.lat}&lon=${this.state.cityData.lon}`;
+      let serverWeatherURL = `${process.env.REACT_APP_SERVER_URL}/weather?lat=${this.state.cityData.lat}&lon=${this.state.cityData.lon}`;
 
       let weatherData = await axios.get(serverWeatherURL);
       this.setState({
@@ -61,7 +61,7 @@ class App extends React.Component {
       })
 
 
-      let serverMoviesURL = `https://city-explorer-rma.herokuapp.com/movies?query=${this.state.searchQuery}`;
+      let serverMoviesURL = `${process.env.REACT_APP_SERVER_URL}/movies?query=${this.state.searchQuery}`;
 
       let moviesData = await axios.get(serverMoviesURL);
       this.setState({
