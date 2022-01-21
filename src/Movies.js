@@ -3,10 +3,10 @@ import MoviesCards from './Movies';
 import Carousel from "react-bootstrap/Carousel";
 
 class Movies extends React.Component {
-  render(
-
-  ) {
-    let movieCardDisplay = this.props.data.map((data, index) => {
+ 
+  render() {
+    let movieCardDisplay = this.props.data;
+    movieCardDisplay.map((data, index) => {
       return (
         <MoviesCards
           key={index}
@@ -16,7 +16,7 @@ class Movies extends React.Component {
         />
       )
     })
-    
+
     return (
       <Carousel fade>
         {movieCardDisplay}

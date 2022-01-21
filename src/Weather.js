@@ -5,9 +5,10 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 class Weather extends React.Component {
 
-
   render() {
-    let cityForecast = this.props.data.map((data, index) => {
+    let cityForecast = this.props.data;
+    console.log(this.props);
+    cityForecast.map((data, index) => {
       return (
         <WeatherLI
           key={index}

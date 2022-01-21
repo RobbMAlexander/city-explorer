@@ -139,7 +139,7 @@ class App extends React.Component {
           {
             this.state.displayMovies && <Movies data={this.state.moviesData} />
           }
-          {this.state.renderError && <p>{this.state.errMsg}</p>}
+          {this.state.renderError && <div><p>{this.state.errMsg}</p></div>}
         </main>
       </>
     );
