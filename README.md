@@ -25,13 +25,16 @@ Lab 08 Data Flow (Authored with Kevin LaMarca):
 Lab 09 Data Flow (Authored with Hambalieu Jallow):
 ![Data Flow](lab-09-dataflow.png)
 
+Lab 10 Data Flow (Authored with Joshua McCluskey & Brian Thornburg):
+![Data Flow](lab-10-dataflow.png)
+
 ## Change Log
 
-01/17/2022 - 0.0.1 
+01/17/2022 - 0.0.1
 
 01/18/22 5:40PM - Basic server functionality (req/res)
 
-01/19/22 :PM - 
+01/19/22 :PM -
 
 ## Credit and Collaborations
 
